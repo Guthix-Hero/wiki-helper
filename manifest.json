@@ -7,12 +7,21 @@
     "default_popup": "index.html",
     "default_icon": "icon.png"
   },
-  "content_scripts": [{
-    "js": ["scripts/content.js"],
-    "matches": ["*://runescape.wiki/*"]
-  }],
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/content.js"
+      ],
+      "matches": [
+        "*://runescape.wiki/*",
+        "*://oldschool.runescape.wiki/*"
+      ]
+    }
+  ],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline'"
   },
-  "permissions": ["activeTab"]
+  "permissions": [
+    "activeTab"
+  ]
 }
