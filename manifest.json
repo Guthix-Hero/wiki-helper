@@ -1,6 +1,6 @@
 {
   "name": "Wiki Helper",
-  "description": "Helper for the RuneScape Wiki",
+  "description": "A helper for the RuneScape Wiki. This extension gives users the ability to run macros for all sections of a RuneScape Wiki page.",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
@@ -13,15 +13,11 @@
         "scripts/content.js"
       ],
       "matches": [
-        "*://runescape.wiki/*",
-        "*://oldschool.runescape.wiki/*"
+        "*://*.runescape.wiki/*"
       ]
     }
   ],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline'"
-  },
-  "permissions": [
-    "activeTab"
-  ]
+  }
 }
